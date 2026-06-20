@@ -464,19 +464,19 @@ font-semibold
               darkMode ? "text-slate-300" : "text-slate-700"
             }`}>
              <li className="flex items-center gap-2">
-              ⚡ Vivado
+               Vivado
              </li>
 
              <li className="flex items-center gap-2">
-             🔧 Cadence
+              Cadence
             </li>
 
             <li className="flex items-center gap-2">
-            🔌 LTspice
+             LTspice
             </li>
 
             <li className="flex items-center gap-2">
-             🤖 Arduino IDE
+              Arduino IDE
             </li>
             </ul>
           </div>
