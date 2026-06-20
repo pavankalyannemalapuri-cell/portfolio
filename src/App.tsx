@@ -1,12 +1,43 @@
 import profile from "./assets/profile.jpeg";
 import { motion } from "framer-motion";
-import { useState } from "react";
 import { FaGithub, FaLinkedin, FaJava } from "react-icons/fa";
 import { SiC } from "react-icons/si";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
 function App() {
-
+  
   const [darkMode, setDarkMode] = useState(true);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState("");
+  const sendEmail = (e: React.FormEvent) => {
+  e.preventDefault();
 
+  emailjs
+    .send(
+      "service_ydtregp",
+      "template_riut9rd",
+      {
+        name,
+        email,
+        subject,
+        message,
+      },
+      "6CV9GPedKzluPhWM1"
+    )
+    .then(() => {
+      setStatus("Message sent successfully!");
+      setName("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
+    })
+    .catch(() => {
+      setStatus("Failed to send message.");
+    });
+};
   return (
     <div
   className={`min-h-screen transition-all duration-500 ${
@@ -715,7 +746,78 @@ font-semibold
   <p className="mb-6">
     Open to internships, collaborations and VLSI opportunities.
   </p>
+  <form
+  onSubmit={sendEmail}
+  className="max-w-xl mx-auto space-y-4"
+>
+  <input
+    type="text"
+    placeholder="Your Name"
+    value={name}
+    onChange={(e) => setName(e.target.value)}
+    required
+    className="w-full p-3 rounded-lg border"
+  />
 
+  <input
+    type="email"
+    placeholder="Your Email"
+    value={email}
+    onChange={(e) => setEmail(e.target.value)}
+    required
+    className="w-full p-3 rounded-lg border"
+  />
+
+  <input
+    type="text"
+    placeholder="Subject"
+    value={subject}
+    onChange={(e) => setSubject(e.target.value)}
+    required
+    className="w-full p-3 rounded-lg border"
+  />
+
+  <textarea
+    placeholder="Your Message"
+    value={message}
+    onChange={(e) => setMessage(e.target.value)}
+    required
+    rows={5}
+    className="w-full p-3 rounded-lg border"
+  />
+
+  <motion.button
+  type="submit"
+  whileHover={{
+    scale: 1.08,
+    y: -4,
+  }}
+  whileTap={{
+    scale: 0.95,
+  }}
+  className="
+    bg-blue-600
+    px-6
+    py-3
+    rounded-lg
+    font-semibold
+    text-white
+    shadow-lg
+  "
+>
+  Send Message
+</motion.button>
+  {status && (
+    <p className="text-center text-green-500">
+      {status}
+    </p>
+  )}
+</form>
+{status && (
+  <p className="text-green-500 mt-4">
+    {status}
+  </p>
+)}
   <div className="flex justify-center gap-8">
 
     <a
