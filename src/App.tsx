@@ -738,7 +738,7 @@ font-semibold
 
   <div className="flex justify-center items-center gap-2">
     <span>📧</span>
-    <span>2300040115ece@gmail.com</span>
+    <span>pavankalyannemalapuri@gmail.com</span>
   </div>
 
   <div className="flex justify-center items-center gap-2">
