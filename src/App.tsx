@@ -2,8 +2,7 @@ import profile from "./assets/profile.jpeg";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { FaGithub, FaLinkedin, FaJava } from "react-icons/fa";
-import { SiPython, SiC } from "react-icons/si";
-import { FaMoon, FaSun } from "react-icons/fa";
+import { SiC } from "react-icons/si";
 function App() {
 
   const [darkMode, setDarkMode] = useState(true);
@@ -368,7 +367,7 @@ function App() {
    </div>
     <div className="flex gap-4 mt-8">
       <a
-        href="/resume.pdf"
+        href="./resume.pdf"
         download
         className="
         bg-blue-600
