@@ -4,6 +4,7 @@ import { FaGithub, FaLinkedin, FaJava } from "react-icons/fa";
 import { SiC } from "react-icons/si";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
+import { FaDatabase } from "react-icons/fa6";
 function App() {
   
   const [darkMode, setDarkMode] = useState(true);
@@ -466,16 +467,20 @@ font-semibold
               darkMode ? "text-slate-300" : "text-slate-700"
               }`}
               >
-              <li className="flex items-center gap-2">
-  <SiC /> C
-</li>
-
-   <li className="flex items-center gap-2">
+                 <li className="flex items-center gap-2">
   <FaJava /> Java
   </li>
+              <li className="flex items-center gap-2">
+  <SiC /> C Programming
+</li>
+
+  
 
   <li className="flex items-center gap-2">
   ⚡ Verilog HDL
+  </li>
+  <li className="flex items-center gap-2">
+    <FaDatabase /> SQL
   </li>
             </ul>
           </div>
@@ -554,7 +559,7 @@ font-semibold
       }`}
       >
       <h3 className="text-2xl font-semibold text-blue-400">
-        Smart Traffic Light Controller
+        Automated Greenhouse Management System
       </h3>
 
       <p
@@ -562,7 +567,7 @@ font-semibold
        darkMode ? "text-slate-300" : "text-slate-700"
        }`}
        >
-        Developed a Traffic Light Control System in Verilog HDL using FSM design principles and validated its functionality through simulation and FPGA implementation.
+        Developed an Automated Greenhouse Management System using ESP32 and sensor-based monitoring to automate irrigation and environmental control, improving resource efficiency through real-time IoT connectivity.
       </p>
 
       <div className="mt-4">
@@ -573,7 +578,7 @@ font-semibold
       : "bg-slate-100 text-slate-700 border border-slate-300"
       }`}
        >
-       Verilog HDL
+       ESP32
        </span>
       </div>
     </div>
@@ -586,7 +591,7 @@ font-semibold
       }`}
      >
       <h3 className="text-2xl font-semibold text-blue-400">
-        Automated Greenhouse Management System
+        Automatic Railway Gate Control System.
       </h3>
 
       <p
@@ -594,7 +599,7 @@ font-semibold
       darkMode ? "text-slate-300" : "text-slate-700"
       }`}
       >
-        Developed a smart greenhouse solution using ESP32 and sensor-based monitoring to automate irrigation and environmental control, improving resource efficiency through real-time IoT connectivity.
+        Developed an Automatic Railway Gate Control System using ESP8266 and sensor-based monitoring to automate gate operation, improving safety and efficiency through real-time IoT connectivity.
       </p>
 
       <div className="mt-4">
@@ -605,7 +610,7 @@ font-semibold
       : "bg-slate-100 text-slate-700 border border-slate-300"
      }`}
      >
-      ESP32
+      ESP8266
      </span>
       </div>
     </div>
@@ -618,7 +623,7 @@ font-semibold
      }`}
      >
       <h3 className="text-2xl font-semibold text-blue-400">
-        Smart Parking System
+        Up/Down Counter using Master-Slave JK Flip-Flops on Artix-7 FPGA
       </h3>
 
       <p
@@ -626,7 +631,7 @@ font-semibold
        darkMode ? "text-slate-300" : "text-slate-700"
        }`}
      >
-        Developed an ESP32-based Smart Parking Management System integrating IR sensors and servo motors for automated vehicle detection, access control, and efficient parking space utilization.
+        Developed an Up/Down Counter using Master-Slave JK Flip-Flops on Artix-7 FPGA, implementing the design in Verilog HDL and validating its functionality through simulation and FPGA implementation.
       </p>
 
       <div className="mt-4">
